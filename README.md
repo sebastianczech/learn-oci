@@ -6,3 +6,16 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
 * [Oracle Cloud Infrastructure Networking Professional](https://mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-networking-professional/133455/)
 * [Oracle Cloud Infrastructure Architect Associate](https://mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-architect-associate/122418/)
 * [OCI for AWS Architects](https://mylearn.oracle.com/ou/course/oci-for-aws-architects/104530/)
+
+## Become an OCI Generative AI Professional
+
+### Fundamentals of LLM
+
+* LLM = Large Language Models
+* **LLM is a probabilistic model of text**
+
+### Generative AI service
+
+### Building blocks for an LLM application
+
+### Build an LLM application using OCI Generative AI service
