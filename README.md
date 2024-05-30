@@ -11,8 +11,33 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
 
 ### Fundamentals of LLM
 
+Notes:
 * LLM = Large Language Models
 * **LLM is a probabilistic model of text**
+* architectures:
+  * encoder - model that convert a sequence of words to an embedding (vector representation) (e.g. embedding tokens)
+  * decoder - models take a sequence of words and output next word (e.g text generation)
+  * encoder-decoder - encodes a sequence of words and use the encoding + output a next word
+* transformers = encoder + decoder
+* prompt - the text provided to an LLM as input, sometimes containing instruction and/or examples
+* prompting -  the process of providing an initial input or question to a LLM to guide its generation of text or to elicit a specific type of response.
+* prompt engineering - the process of iteratively refining a prompt for the purpose of eliciting a particular style of response
+* k-shot prompting - explicitly providing *k* examples of the intended task in the prompt
+* prompting strategies:
+  * chain-of-thought - prompt the LLM to emit intermediate reasoning steps
+  * least-to-most - prompt the LLM to decompose the problem and solve, easy first
+  * step-back - prompt the LLM to identify high-level concepts pertinent to a specific task
+* issues:
+  * prompt injection (jailbreaking) - to deliberately provide an LLM with input that attempts to cause it to ignore instructions, cause harm, behave contrary to deployment expectations
+  * memorization (after answering repeat the prompt)
+    * leaked prompt
+    * leaked private information
+
+Links:
+* [Encoder and Decode explained with practical example](https://medium.com/@muhammad.a0625/encoder-and-decode-explained-with-practical-example-20d19bfe77e9)
+* [Understanding Encoder And Decoder LLMs](https://magazine.sebastianraschka.com/p/understanding-encoder-and-decoder)
+* [Encoder-Decoder Models for Natural Language Processing](https://www.baeldung.com/cs/nlp-encoder-decoder-models)
+* [Encoder Decoder Architecture](https://www.larksuite.com/en_us/topics/ai-glossary/encoder-decoder-architecture)
 
 ### Generative AI service
 
