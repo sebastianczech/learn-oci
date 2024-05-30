@@ -32,6 +32,35 @@ Notes:
   * memorization (after answering repeat the prompt)
     * leaked prompt
     * leaked private information
+* training:
+  * prompting alone may be inappropriate when:
+    * training data exists
+    * domain adoption is required
+  * domain-adaption - adapting a model to enhance its performance outside of the domain it was trained on
+  * styles:
+    * fine-tuning (FT)
+    * parameters efficient FT
+    * soft prompting
+    * continual pre-training
+* decoding:
+  * the process of generating text with an LLM
+  * happens iteratively, 1 word at a time
+  * pick:
+    * the highest probability word at each step (greedy decoding)
+    * randomly among high probability candidates at each step (non-deterministic decoding)
+  * temperature - (hyper) parameter that modulates the distribution over vocabulary
+    * increasing temperature makes the model deviate more from greedy decoding
+* hallucination:
+  * generated text that is non-factual and/or ungrounded
+  * how to reduce it ? e.g. retrieval-augmentation
+  * there is no known methodology to reliable keep LLMs from hallucinating
+* groundedness and attributability:
+  * grounded - generated text is grounded in a document if the document supports text
+* LLM applications:
+  * retrieval augmented generation (RAG)
+  * code models
+  * multi-model
+  * language agents
 
 Links:
 * [Encoder and Decode explained with practical example](https://medium.com/@muhammad.a0625/encoder-and-decode-explained-with-practical-example-20d19bfe77e9)
