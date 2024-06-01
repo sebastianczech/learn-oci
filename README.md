@@ -70,6 +70,33 @@ Links:
 
 ### Generative AI service
 
+* OCI generative AI service:
+  * fully managed service that provides set of customizable LLMs available via API (endpoints)
+  * choice of models
+  * flexible fine-tunning
+  * dedicated AI clusters (GPU based, dedicated RDMA cluster network)
+* text input -> OCI generative AI service -> text output
+* pretrained foundational models
+  * text generation:
+    * command (from cohere)
+    * command-light (from cohere)
+    * 11ama 2-70b-chat (from meta)
+  * text summarization:
+    * command
+  * embedding (convert text to vector embeddings, semantic search, multilingual models):
+    * embed-english-v3.0
+    * embed-multilingual-v3.0
+* fine-tunning - optimizing pretrained foundationl models on a smaller domain-specific dataset:
+  * custom data + pretrained model -> fine-tunning -> custom model
+* prompt engineering and LLM customization
+  * ...
+* fine-tunning and interface
+  * ...
+* dedicated AI clusters
+  * ...
+* generative AI security architecture
+  * ...
+
 ### Building blocks for an LLM application
 
 ### Build an LLM application using OCI Generative AI service
