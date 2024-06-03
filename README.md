@@ -88,6 +88,24 @@ Links:
     * embed-multilingual-v3.0
 * fine-tunning - optimizing pretrained foundationl models on a smaller domain-specific dataset:
   * custom data + pretrained model -> fine-tunning -> custom model
+* generation models:
+  * token - part of a word, entire word or punctuation
+  * use cases - text generation, chat, text summarization
+  * parameters in OCI:
+    * maximum output tokens
+    * temperature - a (hyper) parameter that controls the randomness of the LLM output
+      * 0 - model is deterministic
+      * increased -> distribution is flattened over all words (model uses words with lower probabilities)
+    * top p, top k
+      * top k - tells model to pick the next token from the top k tokens in its list, sorted by probability
+      * top p - picks from the top tokens based on the sum of their probabilities
+    * presence / frequency penalty - useful when you want to get rid of repetition in your outputs
+    * stop sequence - string that tells the model to stop generating more content
+    * show likelihoods - every time a new token is generated, a number between -15 and 0 is assigned to all tokens
+* summarization models
+  * ...
+* embedding models
+  * ... 
 * prompt engineering and LLM customization
   * ...
 * fine-tunning and interface
