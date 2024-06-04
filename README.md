@@ -103,9 +103,20 @@ Links:
     * stop sequence - string that tells the model to stop generating more content
     * show likelihoods - every time a new token is generated, a number between -15 and 0 is assigned to all tokens
 * summarization models
-  * ...
+  * generates a succinct version of the original text that relays the most important information
+  * parameters:
+    * temperature
+    * length of the summary (short, medium, long)
+    * format (free form or in bullet points)
+    * extractiveness (how much to reuse the input)
 * embedding models
-  * ... 
+  * embeddings - numerical representation of a piece of text converted to number sequences
+  * word embedding - capture properties of the word
+  * actual embedding represents more properties (coordinates) that just 2
+  * rows of coordinates are called vectors and represented as numbers
+  * semantic similarity - embeddings that are numerically similar, are also semantically similar
+  * sentence embedding - associates every sentence with a vector of numbers
+  * similar sentences are assigned to similar vectors
 * prompt engineering and LLM customization
   * ...
 * fine-tunning and interface
