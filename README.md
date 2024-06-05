@@ -118,7 +118,29 @@ Links:
   * sentence embedding - associates every sentence with a vector of numbers
   * similar sentences are assigned to similar vectors
 * prompt engineering and LLM customization
-  * ...
+  * prompt - input or initial text provided to the model
+  * prompt engineering - the process of iteratively refining a prompt for the purpose of eliciting a particular style of response
+  * prompt ---input---> LLM
+  * generated text <---output--- LLM
+  * LLM as next work predictors
+  * aligning LLM to follow instructions
+  * reinforce learning from human feedback (RLHF) to fine-tune LLMs to follow broad class of written instructions
+  * in-context learning and few-shot prompting
+    * in-context learning - conditioning (prompting) an LLM with instructions and of demonstrations of the task it is meant to complete
+    * k-shot prompting - explicitly providing k examples of the intended task in the prompt
+  * prompt formats
+    * [Llama2 prompt formatting](https://llama.meta.com/docs/model-cards-and-prompt-formats/meta-llama-2/)
+```
+<<s>
+[INST]
+  <<SYS>>
+  {{message}}
+  <</SYS>>
+[/INST]
+```
+  * advanced prompting strategies
+    * chain-of-thought - provide examples in a prompt
+    * zero shot chain-of-thought
 * fine-tunning and interface
   * ...
 * dedicated AI clusters
