@@ -141,7 +141,23 @@ Links:
   * advanced prompting strategies
     * chain-of-thought - provide examples in a prompt
     * zero shot chain-of-thought
+* customize LLM with your data
+  * why not to do it:
+    * expensive (cost)
+    * a lot of data needed
+    * expertise (thorough understanding of model performance)
+  * 3 methods:
+    * in-context learning / few shot prompting
+    * fine-tunning
+    * RAG
+* retrieval augmented generation (RAG)
+  * language model is able to query enterprise knowledge bases to provide grounded responses
+  * RAG do not require custom models
 * fine-tunning and interface
+  * optimize a model on a smaller domain-specific dataset
+  * benefits:
+    * improve model performance on specific tasks
+    * improve model efficiency (reduced number of tokens)
   * ...
 * dedicated AI clusters
   * ...
