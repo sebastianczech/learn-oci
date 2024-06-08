@@ -153,13 +153,39 @@ Links:
 * retrieval augmented generation (RAG)
   * language model is able to query enterprise knowledge bases to provide grounded responses
   * RAG do not require custom models
-* fine-tunning and interface
+* fine-tunning and inference
   * optimize a model on a smaller domain-specific dataset
+  * model is fine-tuned by taking a pretrained foundational model and providing additional training using custom data
   * benefits:
     * improve model performance on specific tasks
     * improve model efficiency (reduced number of tokens)
-  * ...
+  * custom model - model created using a pretrained model as a base and using own dataset to fine-tune that model
+  * steps:
+    * create a dedicated AI cluster
+    * gather training data
+    * kickstart fine-tuning
+    * fine-tuned (custom) model generated
+  * model endpoint - designated point on a dedicated AI cluster where large language model can accept user requests and send back responses such as the model's generated text
+  * T-Few fine-tuning
+    * selectively updates only a fraction of the model's weights
+    * additive Few-Shot Parameter Efficient Fine Tuning (PEFT)
+    * process:
+      * base-model weights + annotated training data
+      * T-Few fine-tunning method
+      * fine-tune weights
+      * service stack (inference traffic)
+  * reduce inference costs
+    * computationally expensive
+    * share GPU resources
+    * running within dedicated RDMA network
+  * inference serving with minimal overhead
+     * GPU memory is limited so switching between models can incur significant overhead due to reloading the full GPU memory
+     * minimal overhead when switching between models derived from the same base model
 * dedicated AI clusters
+  * effectively a single-tenant deployment where the GPUs in the cluster only host custom models
+  * types:
+    * fine-tuning
+    * hosting (for inference)
   * ...
 * generative AI security architecture
   * ...
