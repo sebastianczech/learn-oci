@@ -186,7 +186,23 @@ Links:
   * types:
     * fine-tuning
     * hosting (for inference)
-  * ...
+  * unit size:
+    * large cohere (for hosting or fine-tunning)
+    * small cohere
+    * embed cohere (for hosting)
+    * llama2-70 (for hosting Llama2 models)
+  * capabilities:
+    * text generation
+    * summarization
+    * embedding
+  * fine-tunning requires more GPUs that hosting a model
+  * same cluster can host up to 50 different fine-tuned models
+  * pricing:
+    * commitments:
+      * min hosting commitment - 744 unit-hours/cluster
+      * min fine-tunning commitment - 1 unit-hour/fine-tunning job
+    * unit hours - each fine-tunning cluster requires 2 units and each cluster is active for 5 hours
+    * fine-tuning or hosting cost / month
 * generative AI security architecture
   * ...
 
