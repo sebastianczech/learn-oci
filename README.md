@@ -181,6 +181,21 @@ Links:
   * inference serving with minimal overhead
      * GPU memory is limited so switching between models can incur significant overhead due to reloading the full GPU memory
      * minimal overhead when switching between models derived from the same base model
+  * configuration
+    * training methods:
+      * Vanilla
+      * T-Few
+    * hyperparamenters:
+      * total training epochs (T-Few)
+      * learning rate (T-Few)
+      * training batch size (T-Few)
+      * early stopping patience (T-Few)
+      * early stopping threshold (T-Few)
+      * log model metrics interval in steps (T-Few)
+      * number of last layers (Vanilla)
+    * results
+      * accuracy
+      * loss
 * dedicated AI clusters
   * effectively a single-tenant deployment where the GPUs in the cluster only host custom models
   * types:
@@ -204,7 +219,16 @@ Links:
     * unit hours - each fine-tunning cluster requires 2 units and each cluster is active for 5 hours
     * fine-tuning or hosting cost / month
 * generative AI security architecture
-  * ...
+  * security and privacy of customer workloads is an essential design tenet
+  * GPUs allocated for a customer's generative AI tasks are isolated from other GPUs
+  * dedicated RDMA network with GPU pool -> allocated into dedicated AI cluster
+  * for strong data privacy, dedicated GPU cluster only handles fine-tuned models of a single customer
+  * base model + fine-tuned model endpoints share the same cluster responsible for the most efficient utilization of GPUs in dedicated AI cluster
+  * customer data access is restricted withing customer's tenancy
+  * leverage OCI security services:
+    * authentication and authorization (IAM)
+    * key management
+    * object storage buckets (encrypted by default)
 
 ### Building blocks for an LLM application
 
