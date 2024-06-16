@@ -232,4 +232,21 @@ Links:
 
 ### Building blocks for an LLM application
 
+* Retrieval Augmented Generation (RAG)
+  * method of generating text using additional information fetched from external data source
+  * retrieve documents and pass then to a seq2seq model
+* **RAG framework = retriever + ranker + generator**
+* RAG techniques:
+  * RAG sequence (like a chapter topic)
+  * RAG token (like each sentence or even each word)
+* RAG pipeline:
+  * ingestion (documents -> chunks -> embedding -> index (database))
+  * retrieval (query -> index -> tok K results)
+  * generation (top K results -> response to user)
+* RAG application:
+  * prompt + chat history = enhanced prompt -> embedding model -> embedding (similarity search) -> vector ID matches -> relational database (fetch docs for matching IDs) -> augmented prompt -> LLM -> highly accurate response
+* RAG evaluation:
+  * RAG triad = query + context + response
+  * context relevance + groundedness + answer relevance
+
 ### Build an LLM application using OCI Generative AI service
