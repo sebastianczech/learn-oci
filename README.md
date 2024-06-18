@@ -6,6 +6,7 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
 * [Oracle Cloud Infrastructure Networking Professional](https://mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-networking-professional/133455/)
 * [Oracle Cloud Infrastructure Architect Associate](https://mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-architect-associate/122418/)
 * [OCI for AWS Architects](https://mylearn.oracle.com/ou/course/oci-for-aws-architects/104530/)
+* [Free Certification for OCI Generative AI - Become an OCI Generative AI Professional - Offer Valid Now Through July 31, 2024](https://education.oracle.com/genai/?source=:so:li:or:awr:oun:::RC_WWMK240423P00002:OUOrganic&SC=:so:li:or:awr:oun:::RC_WWMK240423P00002:OUOrganic&pcode=WWMK240423P00002)
 
 ## Become an OCI Generative AI Professional
 
@@ -232,8 +233,8 @@ Links:
 
 ### Building blocks for an LLM application
 
-* Retrieval Augmented Generation (RAG)
-  * method of generating text using additional information fetched from external data source
+* Retrieval Augmented Generation (RAG):
+  * methodrating text using additional information fetched from external data source
   * retrieve documents and pass then to a seq2seq model
 * **RAG framework = retriever + ranker + generator**
 * RAG techniques:
@@ -248,5 +249,57 @@ Links:
 * RAG evaluation:
   * RAG triad = query + context + response
   * context relevance + groundedness + answer relevance
+* Vector Databases:
+  * LLM vs LLM+RAG
+    * LLM = pre-training -> base LLM -> fine tunning -> fine-tunned LLM -> query / response
+    * LLM+RAG = pre-training -> base LLM -> query relevant docs from Vector DB -> Q/A system -> query / response
+  * Data -> Vector
+  * Vector = sequence of numbers called dimensions, used to capture the important features of the data
+  * Embedding in LLM is high-dimensional vector
+  * Vector is generated using deep learning embedding model and represent the semantic content of data
+  * Similar vectors - K-nearest neighbors algorithm (KNN)
+  * Vector database workflow:
+    * Vectors -> Indexing ->  Vector Database -> Querying -> Post Processing
+  * examples of DBs:
+    * [Faiss](https://github.com/facebookresearch/faiss)
+    * [Pinecone](https://www.pinecone.io/)
+    * [Oracle AI Vector Search](https://www.oracle.com/database/ai-vector-search/)
+    * [Chroma](https://www.trychroma.com/)
+    * [Weaviate](https://weaviate.io/)
+  * properties of DBs:
+    * accuracy
+    * latency
+    * scalability
+  * role of vector DBs in LLM
+    * address the hallucination (e.g. inaccuracy) problem inherent in LLM responses
+    * augment prompt with enterprise-specific content to produce better responses
+    * avoid exceeding LLM token limits by using most relevant content
+    * cheaper than fine-tunning LLMs
+    * real-time updated knowledge base
+    * cache previous LLM prompts / responses to improve performance and reduce costs
+* Keyword search:
+  * keyword - words used to match with the terms people are searching for, when looking for products, services or general information
+  * simplest form of search based on exact matches of the user provided keywords
+  * evaluates documents based on the presence and frequency of the query term
+* Semantic search:
+  * search by meaning
+  * retrieval is done by understanding intent and context, rather than matching keywords
+  * ways to do it:
+    * dense retrieval - uses text embeddings
+    * reranking - assigns relevance score
+  * embedding - represents the meaning of text as list of numbers
+  * capture the essence of the data in a lower-dimensional space while maintaining the semantic relationship and meaning
+  * dense retrieval:
+    * relies on embeddings of both queries and documents to identify and rank relevant documents for a given query
+    * enables the retrieval system to understand and match based on the contextual similarities between queries and documents
+  * rerank:
+    * assigns a relevance score to (query, response) pairs from initial search results
+    * high relevance score pairs are more likely to be correct
+    * implemented through a trained LLM
+* Hybrid search -> Sparse + Dense
+```
+          /--> dense embedding model  --\
+input data                                > hybrid -> normalization -> hybrid index
+          \--> sparse embedding model --/
+```
 
-### Build an LLM application using OCI Generative AI service
