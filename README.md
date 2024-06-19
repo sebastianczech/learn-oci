@@ -303,3 +303,38 @@ input data                                > hybrid -> normalization -> hybrid in
           \--> sparse embedding model --/
 ```
 
+### Build an LLM application using OCI Generative AI service
+
+* Build conversational Chatbot:
+  * [LangChain](https://github.com/langchain-ai/langchain) prompts and models
+  * Incorporate memory
+  * Implement RAG with [LangChain](https://github.com/langchain-ai/langchain)
+  * Trace LLM calls and evaluate
+  * Deploy Chatbot on OCI
+* ChatBot = OCI Generative AI Service + [LangChain](https://github.com/langchain-ai/langchain)
+* [Setup guide](https://github.com/ou-developers/ou-generativeai-pro/blob/main/demos/module4/OU%20ChatBot%20Setup-V1.pdf)
+* [Source code](https://github.com/ou-developers/ou-generativeai-pro/tree/main/demos)
+* Chatbot architecture:
+```
+            context - document from storage
+question -> prompt  --------------------------> LLM -> answer
+            context - memory
+```
+* LangChain:
+  * framework for developing apps powered by LLM
+  * components:
+    * LLM
+    * prompts
+    * memory
+    * chains
+    * vector stores
+    * document loaders
+  * models:
+    * LLM
+    * Chat models
+  * prompt templates:
+    * predefined recipes for generating prompts
+  * chains:
+    * using LCEL (LangChain Expression Language)
+    * legacy (e.g. Python)
+* Development environment
