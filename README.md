@@ -326,6 +326,11 @@ question -> prompt  --------------------------> LLM -> answer
     * LLM
     * prompts
     * memory
+      * ability to store information about past interactions
+      * chain interacts with the memory twice a run
+        * after user input but before chain execution (read from memory)
+        * after core logic but before output (write to memory)
+      * memory per user
     * chains
     * vector stores
     * document loaders
@@ -337,4 +342,42 @@ question -> prompt  --------------------------> LLM -> answer
   * chains:
     * using LCEL (LangChain Expression Language)
     * legacy (e.g. Python)
-* Development environment
+* RAG (retrieval augmented generation) with LangChain
+  * training data
+  * custom data
+  * the process of fetching custom information and inserting it into the model prompt is know as Retrieval Augmented Generation (RAG)
+  * LLM has limited knowledge and needs to be augmented with custom data
+  * indexing (local document, split documents, embed and store) + retrieval ang generation (retrieve, generate)
+* RAG plus Memory
+  * chatbot needs to be conversational too
+* Chatbot architecture:
+  * indexing:
+    * doc load
+    * split text
+    * embedding
+    * Chroma DB
+    * file store
+  * retrieval and generation:
+    * load vector store
+    * DB
+    * embedding
+    * retriever
+    * LLM
+    * memory
+    * chain
+    * streamlit client
+* Deployment to OCI:
+  * VM (virtual machine)
+  * source code
+  * Python with virtual environment
+  * dependencies
+  * Chroma DB server
+  * Chatbot app
+* Deployment of LangChain application to Data Science as Model:
+  * OCI Gen AI LLM
+  * LangChain application
+  * ChainDeployment class
+  * Model Artifacts
+  * Deployment of the model
+  * Model invocation
+* [Oracle Accelerated Data Science (ADS)](https://accelerated-data-science.readthedocs.io/en/latest/)
