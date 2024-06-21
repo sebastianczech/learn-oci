@@ -395,3 +395,26 @@ question -> prompt  --------------------------> LLM -> answer
 * other use case:
   * AI assisted chatbot + company policies + chat history -> model ?
   * LLM enhanced with RAG for dynamic information retrieval and response generation
+* [Build a basic LLM chat app](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)
+* [langchain.memory.buffer.ConversationBufferMemory](https://api.python.langchain.com/en/latest/memory/langchain.memory.buffer.ConversationBufferMemory.html)
+* [langchain_community.chat_message_histories.streamlit.StreamlitChatMessageHistory](https://api.python.langchain.com/en/latest/chat_message_histories/langchain_community.chat_message_histories.streamlit.StreamlitChatMessageHistory.html#langchain-community-chat-message-histories-streamlit-streamlitchatmessagehistory)
+
+### Topics to investigate
+
+* what if cosine distance of 0 for the relationship between two embeddings ?
+* when soft prompting appropriate compared to other training styles ?
+* challenges to apply diffusion models to text generation ?
+* fine-tunning vs parameter-efficient fine tunning (PEFT) ?
+* what does the process of greedy decoding entail ?
+* semantic relationship in case fo accuracy in vector DBs to the effectiveness of LLMs ?
+* loss metric for model's predictions ?
+* characteristics of t-few fine-tunning for LLM ?
+* indexing in vector DBs ?
+* what are LangChain components ?
+* when fine-tunning is appropriate method for customizing LLM ?
+* how concept of "Groundedness" differ from "Answer Relevance" for RAG ?
+* prompt templates in Python ?
+* accuracy measure for fine-tuning result ?
+* evaluation of documents in keyword-based search ?
+* capabilities of string prompt templates ?
+* purpose of RAG in text generation ?
