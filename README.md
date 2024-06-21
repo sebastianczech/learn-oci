@@ -40,8 +40,10 @@ Notes:
   * domain-adaption - adapting a model to enhance its performance outside of the domain it was trained on
   * styles:
     * fine-tuning (FT)
+      * e.g. when there is a significant amount of labeled data
     * parameters efficient FT
     * soft prompting
+      * e.g. when there is a need to add learnable parameters to a LLM without task-specific training
     * continual pre-training
 * decoding:
   * the process of generating text with an LLM
@@ -51,6 +53,7 @@ Notes:
     * randomly among high probability candidates at each step (non-deterministic decoding)
   * temperature - (hyper) parameter that modulates the distribution over vocabulary
     * increasing temperature makes the model deviate more from greedy decoding
+    * increasing temperature flattens the distribution, allowing for more varied word choices
 * hallucination:
   * generated text that is non-factual and/or ungrounded
   * how to reduce it ? e.g. retrieval-augmentation
@@ -101,6 +104,7 @@ Links:
       * top k - tells model to pick the next token from the top k tokens in its list, sorted by probability
       * top p - picks from the top tokens based on the sum of their probabilities
     * presence / frequency penalty - useful when you want to get rid of repetition in your outputs
+      * penalty function -> it penalizes a token each time it appears after the first occurence
     * stop sequence - string that tells the model to stop generating more content
     * show likelihoods - every time a new token is generated, a number between -15 and 0 is assigned to all tokens
 * summarization models
@@ -175,6 +179,7 @@ Links:
       * T-Few fine-tunning method
       * fine-tune weights
       * service stack (inference traffic)
+    * it selectively updates only a fraction of weights to reduce computational load and avoid overfitting
   * reduce inference costs
     * computationally expensive
     * share GPU resources
@@ -219,6 +224,8 @@ Links:
       * min fine-tunning commitment - 1 unit-hour/fine-tunning job
     * unit hours - each fine-tunning cluster requires 2 units and each cluster is active for 5 hours
     * fine-tuning or hosting cost / month
+  * unit hours required for fine-tuning:
+    * cluster active 10 days -> 10 days * 24 hours * 2 units = 480 unit hours (minimum unit hours commitment is 744 unit hours for hosting commitment, not fine-tunning)
 * generative AI security architecture
   * security and privacy of customer workloads is an essential design tenet
   * GPUs allocated for a customer's generative AI tasks are isolated from other GPUs
@@ -250,6 +257,8 @@ Links:
   * RAG triad = query + context + response
   * context relevance + groundedness + answer relevance
 * Vector Databases:
+  * structure of vector database vs relational databases:
+    * vector db is based on distance and similarities in a vector space
   * LLM vs LLM+RAG
     * LLM = pre-training -> base LLM -> fine tunning -> fine-tunned LLM -> query / response
     * LLM+RAG = pre-training -> base LLM -> query relevant docs from Vector DB -> Q/A system -> query / response
@@ -342,6 +351,8 @@ question -> prompt  --------------------------> LLM -> answer
   * chains:
     * using LCEL (LangChain Expression Language)
     * legacy (e.g. Python)
+  * chain typically interact with memory in a run within the LangChain framework ?
+    * after user input but before chain execution , and again after core logic but before output
 * RAG (retrieval augmented generation) with LangChain
   * training data
   * custom data
@@ -381,3 +392,6 @@ question -> prompt  --------------------------> LLM -> answer
   * Deployment of the model
   * Model invocation
 * [Oracle Accelerated Data Science (ADS)](https://accelerated-data-science.readthedocs.io/en/latest/)
+* other use case:
+  * AI assisted chatbot + company policies + chat history -> model ?
+  * LLM enhanced with RAG for dynamic information retrieval and response generation
