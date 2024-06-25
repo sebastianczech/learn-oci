@@ -7,6 +7,9 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
 * [Oracle Cloud Infrastructure Architect Associate](https://mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-architect-associate/122418/)
 * [OCI for AWS Architects](https://mylearn.oracle.com/ou/course/oci-for-aws-architects/104530/)
 * [Free Certification for OCI Generative AI - Become an OCI Generative AI Professional - Offer Valid Now Through July 31, 2024](https://education.oracle.com/genai/?source=:so:li:or:awr:oun:::RC_WWMK240423P00002:OUOrganic&SC=:so:li:or:awr:oun:::RC_WWMK240423P00002:OUOrganic&pcode=WWMK240423P00002)
+* [Generative AI](https://docs.oracle.com/en-us/iaas/Content/generative-ai/home.htm)
+* [EmbedText](https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-inference/20231130/EmbedTextResult/EmbedText)
+* [Oracle Communities - Generative AI](https://community.oracle.com/ou/search?domain=all_content&query=generative%20ai&scope=site&source=community)
 
 ## Become an OCI Generative AI Professional
 
