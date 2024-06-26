@@ -44,6 +44,7 @@ Notes:
   * styles:
     * fine-tuning (FT)
       * e.g. when there is a significant amount of labeled data
+      * e.g. when the LLM does not perform well on a task and the data for prompt engineering is too large
     * parameters efficient FT
     * soft prompting
       * e.g. when there is a need to add learnable parameters to a LLM without task-specific training
@@ -57,6 +58,8 @@ Notes:
   * temperature - (hyper) parameter that modulates the distribution over vocabulary
     * increasing temperature makes the model deviate more from greedy decoding
     * increasing temperature flattens the distribution, allowing for more varied word choices
+* greedy decoding
+  * choosing the word with the highest probability at each step of decoding
 * hallucination:
   * generated text that is non-factual and/or ungrounded
   * how to reduce it ? e.g. retrieval-augmentation
@@ -93,8 +96,14 @@ Links:
   * embedding (convert text to vector embeddings, semantic search, multilingual models):
     * embed-english-v3.0
     * embed-multilingual-v3.0
+* challenge when applying diffusion models to text generation:
+  * diffusion models work well with continuous data
+  * in image generation pixel values are inherently continuous
+  * text data is discrete and categorical
+  * discreteness means that you can't directly apply the same gradual noise and denoising process that works for images
 * fine-tunning - optimizing pretrained foundationl models on a smaller domain-specific dataset:
   * custom data + pretrained model -> fine-tunning -> custom model
+  * accuracy is a performance metric that is used to evaluate classification models - it is defined as the number of correct predictions divided by the total number of predictions made
 * generation models:
   * token - part of a word, entire word or punctuation
   * use cases - text generation, chat, text summarization
@@ -177,6 +186,8 @@ Links:
   * T-Few fine-tuning
     * selectively updates only a fraction of the model's weights
     * additive Few-Shot Parameter Efficient Fine Tuning (PEFT)
+      * fine-tuning typically involves adjusting the weights of a pretrained model across all layers to better perform on a specific task.
+      * PEFT is a technique developed to fine-tune large models more efficiently - instead of updating all the parameters, PEFT techniques update only a small subset of the parameters or add small, trainable modules within the model while keeping most of the original pretrained parameters frozen.
     * process:
       * base-model weights + annotated training data
       * T-Few fine-tunning method
@@ -249,6 +260,8 @@ Links:
 * **RAG framework = retriever + ranker + generator**
 * RAG techniques:
   * RAG sequence (like a chapter topic)
+    * combines the powers of a retriever and a generator
+    * for each input, it retrieves a set of relevant documents and considers them together to generate cohesive response
   * RAG token (like each sentence or even each word)
 * RAG pipeline:
   * ingestion (documents -> chunks -> embedding -> index (database))
@@ -258,7 +271,7 @@ Links:
   * prompt + chat history = enhanced prompt -> embedding model -> embedding (similarity search) -> vector ID matches -> relational database (fetch docs for matching IDs) -> augmented prompt -> LLM -> highly accurate response
 * RAG evaluation:
   * RAG triad = query + context + response
-  * context relevance + groundedness + answer relevance
+  * context relevance + groundedness (factual correctness) + answer relevance (query relevance)
 * Vector Databases:
   * structure of vector database vs relational databases:
     * vector db is based on distance and similarities in a vector space
@@ -272,6 +285,9 @@ Links:
   * Similar vectors - K-nearest neighbors algorithm (KNN)
   * Vector database workflow:
     * Vectors -> Indexing ->  Vector Database -> Querying -> Post Processing
+    * indexing map vectors to a data structure for faster searching, enabling efficient retrieval
+    * indexing structures organize data in a way that optimizes retrieval operations, such as nearest neighbor search, which is commonly used for finding the most similar vectors
+  * cosine distance of 0 -> similar direction
   * examples of DBs:
     * [Faiss](https://github.com/facebookresearch/faiss)
     * [Pinecone](https://www.pinecone.io/)
@@ -282,6 +298,8 @@ Links:
     * accuracy
     * latency
     * scalability
+  * accuracy in vector databases contributes to the effectiveness of Large Language Models (LLMs) by preserving a specific type of relationship
+    * semantic relationships in vector spaces are foundational to the way LLMs understand and process language
   * role of vector DBs in LLM
     * address the hallucination (e.g. inaccuracy) problem inherent in LLM responses
     * augment prompt with enterprise-specific content to produce better responses
@@ -333,7 +351,7 @@ question -> prompt  --------------------------> LLM -> answer
             context - memory
 ```
 * LangChain:
-  * framework for developing apps powered by LLM
+  * Python framework for developing apps powered by LLM
   * components:
     * LLM
     * prompts
@@ -362,6 +380,8 @@ question -> prompt  --------------------------> LLM -> answer
   * the process of fetching custom information and inserting it into the model prompt is know as Retrieval Augmented Generation (RAG)
   * LLM has limited knowledge and needs to be augmented with custom data
   * indexing (local document, split documents, embed and store) + retrieval ang generation (retrieve, generate)
+  * the purpose of RAG in text generation is to generate text using extra information retrieved from an external source
+  * RAG combines a retrieval step with a generation step
 * RAG plus Memory
   * chatbot needs to be conversational too
 * Chatbot architecture:
@@ -401,6 +421,10 @@ question -> prompt  --------------------------> LLM -> answer
 * [Build a basic LLM chat app](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)
 * [langchain.memory.buffer.ConversationBufferMemory](https://api.python.langchain.com/en/latest/memory/langchain.memory.buffer.ConversationBufferMemory.html)
 * [langchain_community.chat_message_histories.streamlit.StreamlitChatMessageHistory](https://api.python.langchain.com/en/latest/chat_message_histories/langchain_community.chat_message_histories.streamlit.StreamlitChatMessageHistory.html#langchain-community-chat-message-histories-streamlit-streamlitchatmessagehistory)
+  * StreamlitChatMessageHistory can be used by any type of LLM application
+* string prompt templates - can support any number of variables, including none at all
+  * prompt templates in language model applications typically use Python's `str.format` syntax
+* loss metric - indicates how wrong the model's predictions are
 
 ### Topics to investigate
 
