@@ -2,6 +2,7 @@
 
 Links, materials and notes collected while learning OCI (Oracle Cloud Infrastructure):
 * [Become an OCI Generative AI Professional](https://mylearn.oracle.com/ou/learning-path/become-an-oci-generative-ai-professional/136227)
+* [Become An OCI AI Foundations Associate (2023)](https://mylearn.oracle.com/ou/learning-path/become-an-oci-ai-foundations-associate-2023/127177)
 * [Become An OCI Container Engine for Kubernetes Specialist](https://mylearn.oracle.com/ou/learning-path/become-an-oci-container-engine-for-kubernetes-specialist/134984)
 * [Oracle Cloud Infrastructure Networking Professional](https://mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-networking-professional/133455/)
 * [Oracle Cloud Infrastructure Architect Associate](https://mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-architect-associate/122418/)
@@ -10,6 +11,13 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
 * [Generative AI](https://docs.oracle.com/en-us/iaas/Content/generative-ai/home.htm)
 * [EmbedText](https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-inference/20231130/EmbedTextResult/EmbedText)
 * [Oracle Communities - Generative AI](https://community.oracle.com/ou/search?domain=all_content&query=generative%20ai&scope=site&source=community)
+* [What Is Generative AI (GenAI)? How Does It Work?](https://www.oracle.com/artificial-intelligence/generative-ai/what-is-generative-ai/)
+* [What Is Retrieval-Augmented Generation (RAG)?](https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/)
+* [Oracle’s generative AI strategy](https://blogs.oracle.com/ai-and-datascience/post/generative-ai-strategy)
+* [Oracle Cloud Infrastructure Data Science and AI services Examples](https://github.com/oracle-samples/oci-data-science-ai-samples)
+* [AI Solutions Hub](https://www.oracle.com/artificial-intelligence/solutions/)
+* [AI hands-on lab](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/livelabs-workshop-cards?c=y&p100_focus_area=212:220)
+* [OCI Generative AI Agents](https://www.oracle.com/artificial-intelligence/generative-ai/agents/)
 
 ## Become an OCI Generative AI Professional
 
