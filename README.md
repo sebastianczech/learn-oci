@@ -19,6 +19,55 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
 * [AI hands-on lab](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/livelabs-workshop-cards?c=y&p100_focus_area=212:220)
 * [OCI Generative AI Agents](https://www.oracle.com/artificial-intelligence/generative-ai/agents/)
 
+## Become An OCI AI Foundations Associate (2023)
+
+### AI foundations
+
+* AI = artificial intelligence
+  * ability of machines to mimic the cognitive abilities and problem-solving capabilities of human intelligence
+  * if we can apply AGI to solve problems with specific, narrow objectives
+* AGI = artificial general intelligence
+  * if we can replicate human intelligence (learning skills, thinks abstractly, plan, create art) in machines
+* AI examples:
+  * classifying images
+  * writing code
+* AI tasks and data:
+  * language related:
+    * text-related AI tasks e.g.:
+      * detect language
+      * extract key phrases
+    * generative AI tasks e.g.:
+      * create summary
+      * answer questions
+    * text as data:
+      * inherently sequential -> sentences
+      * multiple words -> tokenization
+      * varying sentence lengths -> padding
+      * similar words -> dot or cosine similarity and embedding
+    * language AI models:
+      * designed to understand, process and generate natural language
+  * speech related:
+    * speech-related AI tasks e.g.:
+      * turn speech to text
+    * generative AI tasks e.g.:
+      * music composition
+    * audio as data:
+      * digitized snapshots in time -> sample rate
+      * sampling rate of 44.1 kHz
+      * bit depth
+    * audio AI models:
+      * designed to manipulate audio and speech
+  * vision-related:
+    * image-related AI tasks e.g:
+      * classify image
+    * generative AI e.g.:
+      * create image from text
+    * image as data:
+      * images consist of pixels
+      * pixels are grey scale or color
+    * vision AI models:
+      * designed to understand information from images and videos
+
 ## Become an OCI Generative AI Professional
 
 ### Fundamentals of LLM
