@@ -67,6 +67,15 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
       * pixels are grey scale or color
     * vision AI models:
       * designed to understand information from images and videos
+* AI vs ML vs DL
+  * AI > ML > DL
+  * AI - machines imitate human intelligence
+  * ML - algorithms learn from past data and predict outcome on new data
+    * supervised ML - learn from labeled data
+    * unsupervised ML - discover trends, cluster data
+    * reinforcement learning - solve problems by trial and error
+  * DL - algorithms learn from complex data using neural networks and predict outcome
+* generative AI - ML that can produce content (audio, code, text, video, images)
 
 ## Become an OCI Generative AI Professional
 
