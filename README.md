@@ -67,7 +67,7 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
       * pixels are grey scale or color
     * vision AI models:
       * designed to understand information from images and videos
-* AI vs ML vs DL
+* AI vs ML vs DL vs GenAI
   * AI > ML > DL
   * AI - machines imitate human intelligence
   * ML - algorithms learn from past data and predict outcome on new data
@@ -75,7 +75,25 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
     * unsupervised ML - discover trends, cluster data
     * reinforcement learning - solve problems by trial and error
   * DL - algorithms learn from complex data using neural networks and predict outcome
+  * GenAI
 * generative AI - ML that can produce content (audio, code, text, video, images)
+
+### Generative AI and LLM Foundations
+
+* GenAI - type of AI that can create new content
+* subset of DL where models are trained to generate output on their own
+* learns the underlying patterns in a given data set and uses that knowledge to create new data that shares those patterns
+* GenAI types:
+  * image-based
+  * text-based
+* [GAN - Generative Adversarial Network](https://www.geeksforgeeks.org/generative-adversarial-network-gan/) - generate realistic / high quality images that resemble training data
+* LLMs - built to understand, generate and process human language at a massive scale
+* Transformers and LLMs (Large Language Models) - based on Deep Learning architectures such as Transformers
+* use cases:
+  * visual (e.g. image generation)
+  * language (e.g. content creation, code generation)
+  * music
+  * drug discovery
 
 ## Become an OCI Generative AI Professional
 
