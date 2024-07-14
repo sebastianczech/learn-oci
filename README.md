@@ -100,6 +100,17 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
   * scaled to milions of parameters
   * enhanced contextual understanding
   * natural language understanding
+* Model size and parameters
+  * model size - amount of memory required to store the model's parameters
+  * paremeters - numerical valuses of the model that change as it learns
+  * tokens - parts of words commonly occuring sequences of characters
+  * model size and number of tokens shoud be scale equally
+  * scaling to larger data sets only benefical when data is high-quality
+* applications of LLM:
+  * text clasification
+  * question answering
+  * text generation
+  * document summarization
 
 ## Become an OCI Generative AI Professional
 
