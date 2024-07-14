@@ -171,6 +171,21 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
     * handle edge cases and conditional response
     * give examples for completing the task for a desirable outcome
 * fine tunning
+  * process of training pretrained model on a specific task to make it more specialized
+  * model is fine-tuned on specific task using a smaller, domain-specific dataset
+  * weights from pretraining are updated based on the new data
+  * why?
+    * task-specific adaption
+    * domain-specific vocabulary
+    * efficiency & resources utilization
+    * ethical concerns
+* LLM lifecycle:
+  * pretraining
+  * fine-tunning
+  * prompt engineering
+  * evaluation and interation
+  * deployment and ongoing maintenance
+  * feedback loop
 
 ## Become an OCI Generative AI Professional
 
