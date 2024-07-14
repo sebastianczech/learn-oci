@@ -94,6 +94,12 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
   * language (e.g. content creation, code generation)
   * music
   * drug discovery
+* LLMs features:
+  * based on deep learning architecture like transformers
+  * trained on vast language data
+  * scaled to milions of parameters
+  * enhanced contextual understanding
+  * natural language understanding
 
 ## Become an OCI Generative AI Professional
 
