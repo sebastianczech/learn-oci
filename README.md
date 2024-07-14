@@ -18,6 +18,8 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
 * [AI Solutions Hub](https://www.oracle.com/artificial-intelligence/solutions/)
 * [AI hands-on lab](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/livelabs-workshop-cards?c=y&p100_focus_area=212:220)
 * [OCI Generative AI Agents](https://www.oracle.com/artificial-intelligence/generative-ai/agents/)
+* [Cohere Documentation](https://docs.cohere.com/)
+* [LLM University](https://cohere.com/llmu)
 
 ## Become An OCI AI Foundations Associate (2023)
 
@@ -150,7 +152,25 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
          1. attention (helps understand the context of each word)
          2. feedforward (applies specific function to each word individually)
       5. softmax (generates a list of scores for each word in the vocabulary)
-* 
+* promp engineering
+  * prompt - the input or initial word provided to the model
+  * prompt engineering - the process of desinging specific instructions to interfact with a LLM
+    * [Prompt Engineering module](https://docs.cohere.com/docs/intro-prompt-engineering)
+    * [Crafting Effective Prompts](https://docs.cohere.com/docs/crafting-effective-prompts)
+  * basics:
+    * text prompts are how users interact with LLM models
+    * LLM models attemps to generate the next series of words that are most likely to follow from the previous text
+  * prompt with number of examples:
+    * zero shot
+    * one shot
+    * few shots
+  * in-context learning
+  * best practicies:
+    * write prompt in multiple ways
+    * describe task with clear instructions
+    * handle edge cases and conditional response
+    * give examples for completing the task for a desirable outcome
+* fine tunning
 
 ## Become an OCI Generative AI Professional
 
