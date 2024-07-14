@@ -130,6 +130,27 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
   * type of deep learning
   * self attention
   * encoder-decoder
+  * architecture:
+    * allows the model to weigh the importance of words or tokens
+    * eleminates the need for recurrent or convolutional layers
+  * 2 main parts:
+    * encoder
+      * reads the inputs and uses attention mechanism to capture meaning
+    * decoder
+      * uses this information to generat output sentence
+  * model types:
+    * encoder only (e.g. BERT)
+    * encode-decoder (e.g. machine translation)
+    * decoder only (e.g. GPT)
+  * process:
+      1. tokenization (the sentences is broken down into smaller pieces called tokens)
+      2. embedding (each token is converted into numerical form - a vector)
+      3. positional encoding (model needs to know the order of the words in the sentence)
+      4. transformer
+         1. attention (helps understand the context of each word)
+         2. feedforward (applies specific function to each word individually)
+      5. softmax (generates a list of scores for each word in the vocabulary)
+* 
 
 ## Become an OCI Generative AI Professional
 
