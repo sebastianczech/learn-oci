@@ -111,6 +111,25 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
   * question answering
   * text generation
   * document summarization
+* sequence model
+  * solves probles where input data is in the form of sequences
+  * goal - find patterns and relationships and make predicitions
+  * examples:
+    * NLP
+    * music generation
+    * speech recognition
+    * gesture generation
+    * time series analysis
+* recurrent neural netowrks (RNN)
+  * handles sequentional data
+  * maintains hidden state or memory
+  * allows information to persist using feedback loop
+  * capture dependencies
+* transformes
+  * understand sentences as a whole
+  * type of deep learning
+  * self attention
+  * encoder-decoder
 
 ## Become an OCI Generative AI Professional
 
