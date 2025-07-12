@@ -1,5 +1,14 @@
 # OCI (Oracle Cloud Infrastructure)
 
+## Race to Certification 2025
+
+Links:
+* [Race to Certification 2025](https://education.oracle.com/race-to-certification-2025)
+* [Exam Credits](https://mylearn.oracle.com/ou/examcredits)
+* [Certification Credentials](https://mylearn.oracle.com/ou/profile-dashboard/Achievements)
+
+## Become An OCI AI Foundations Associate (2023)
+
 Links, materials and notes collected while learning OCI (Oracle Cloud Infrastructure):
 * [Become an OCI Generative AI Professional](https://mylearn.oracle.com/ou/learning-path/become-an-oci-generative-ai-professional/136227)
 * [Become An OCI AI Foundations Associate (2023)](https://mylearn.oracle.com/ou/learning-path/become-an-oci-ai-foundations-associate-2023/127177)
@@ -20,8 +29,6 @@ Links, materials and notes collected while learning OCI (Oracle Cloud Infrastruc
 * [OCI Generative AI Agents](https://www.oracle.com/artificial-intelligence/generative-ai/agents/)
 * [Cohere Documentation](https://docs.cohere.com/)
 * [LLM University](https://cohere.com/llmu)
-
-## Become An OCI AI Foundations Associate (2023)
 
 ### AI foundations
 
